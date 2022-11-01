@@ -5,6 +5,7 @@ import 'react-native-gesture-handler';
 export default function ScreenA({navigation}) {
   const onPressHandler = () => {
     navigation.navigate('Screen_B');
+    navigation.navigate('Screen_C');
     // navigation.replace("Screen_B");
   };
   return (
@@ -15,7 +16,8 @@ export default function ScreenA({navigation}) {
         style={({pressed}) => ({
           backgroundColor: pressed ? '#ddd' : '#0f0',
         })}>
-        <Text style={styles.text}>Go to the Screen B</Text>
+        <Text style={styles.text}>Go to the Products</Text>
+        <Text style={styles.text1}>Go to the Detail</Text>
       </Pressable>
     </View>
   );
@@ -31,4 +33,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
   },
+  text1: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: 'pink',
+    backgroundColor:'white',
+  }
 });
